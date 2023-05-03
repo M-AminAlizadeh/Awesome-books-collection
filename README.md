@@ -62,7 +62,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://andrianarivo.github.io/awesome_books/)
+- [Live Demo Link](https://m-aminalizadeh.github.io/Microverse-awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,15 +118,6 @@ You can deploy this project by pushing to your own `github page`
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **David**
-
-- GitHub: [@andrianarivo](https://github.com/andrianarivo)
-- LinkedIn: [David Andrianarivo](https://www.linkedin.com/in/david-andrianarivo-3692101b6/)
-
-👤 **Hafiz**
-
-- GitHub: [@HafizMassamTabraizKhan](https://github.com/HafizMassamTabraizKhan)
-- LinkedIn: [Hafiz Massam Tabraiz Khan](https://linkedin.com/in/linkedinhandle)
 
 👤 **Amin**
 
@@ -139,8 +130,9 @@ You can deploy this project by pushing to your own `github page`
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Using classes**
-- [ ] **Complete website with navigation**
+-  **Using classes**
+-  **Using es6**
+-  **Using module bundler**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

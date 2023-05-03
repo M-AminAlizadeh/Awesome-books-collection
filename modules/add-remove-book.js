@@ -13,4 +13,17 @@ const listOfBooks = () => {
   booksContainer.innerHTML = bookStore.render();
 };
 
-export { listOfBooks };
+const removeBook = () => {
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('remove-btn')) {
+      bookStore.remove(e.target.id);
+      bookStore.saveData();
+      booksContainer.innerHTML = bookStore.render();
+      if (bookStore.empty()) {
+        booksContainer.classList.remove('border');
+      }
+    }
+  });
+};
+
+export { listOfBooks, removeBook };

@@ -1,5 +1,5 @@
 import { mainContainer, navLinks, BookStore } from './bookstore.js';
-import { listOfBooks } from './addbook.js';
+import { listOfBooks } from './add-remove-book.js';
 const bookStore = new BookStore();
 let addBtn;
 

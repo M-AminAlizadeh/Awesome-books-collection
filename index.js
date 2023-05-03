@@ -1,9 +1,9 @@
 import { listOfBooks, removeBook } from './modules/add-remove-book.js';
-import { spa } from './modules/spa.js';
-import { timeContainer,DateTime } from "./modules/luxon.js";
+import spa from './modules/spa.js';
+import { timeContainer, DateTime } from './modules/luxon.js';
 
 // Add a book
-listOfBooks;
+listOfBooks();
 
 // Remove a book
 removeBook();

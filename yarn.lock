@@ -4098,6 +4098,11 @@
   "resolved" "https://registry.npmjs.org/lru-cache/-/lru-cache-9.1.1.tgz"
   "version" "9.1.1"
 
+"luxon@^3.3.0":
+  "integrity" "sha512-An0UCfG/rSiqtAIiBPO0Y9/zAnHUZxAMiCpTd5h2smgsj7GGmcenvrvww2cqNA8/4A5ZrD1gJpHN2mIHZQF+Mg=="
+  "resolved" "https://registry.npmjs.org/luxon/-/luxon-3.3.0.tgz"
+  "version" "3.3.0"
+
 "make-dir@^3.0.0", "make-dir@^3.1.0":
   "integrity" "sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw=="
   "resolved" "https://registry.npmjs.org/make-dir/-/make-dir-3.1.0.tgz"

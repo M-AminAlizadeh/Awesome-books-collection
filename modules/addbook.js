@@ -1,3 +1,7 @@
+import { mainContainer, BookStore } from './bookstore.js';
+const bookStore = new BookStore();
+let booksContainer = '';
+
 const listOfBooks = () => {
   bookStore.getData();
   mainContainer.innerHTML = `
@@ -9,5 +13,4 @@ const listOfBooks = () => {
   booksContainer.innerHTML = bookStore.render();
 };
 
-// Export module
-export {listOfBooks};
+export { listOfBooks };

@@ -1,4 +1,6 @@
-export default class BookStore {
+const mainContainer = document.querySelector('main');
+const navLinks = document.querySelectorAll('.nav-link');
+class BookStore {
   constructor() {
     this.booksArray = [];
   }
@@ -47,3 +49,6 @@ export default class BookStore {
     return this.booksArray.length === 0;
   }
 }
+
+// Exports
+export { mainContainer, navLinks, BookStore };

@@ -1,33 +1,28 @@
 {
-  "name": "portfolio",
+  "name": "awesome-books-collection",
+  "homepage": "",
   "version": "1.0.0",
-  "description": "<a name=\"readme-top\"></a>",
-  "main": "script.js",
+  "description": "",
+  "main": "index.js",
+  "author": "Amin Alizadeh",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrianarivo/portfolio.git"
+    "url": "https://github.com/M-AminAlizadeh/Awesome-books-collection"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andrianarivo/portfolio/issues"
-  },
-  "homepage": "https://github.com/andrianarivo/portfolio#readme",
   "devDependencies": {
     "babel-eslint": "10.x",
     "eslint": "7.x",
     "eslint-config-airbnb-base": "14.x",
     "eslint-plugin-import": "2.x",
     "hint": "7.x",
+    "http-server": "^14.1.1",
     "stylelint": "13.x",
     "stylelint-config-standard": "21.x",
     "stylelint-csstree-validator": "1.x",
     "stylelint-scss": "3.x"
-  },
-  "dependencies": {
-    "luxon": "^3.3.0"
   }
 }

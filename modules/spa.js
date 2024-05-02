@@ -74,17 +74,13 @@ const spa = () => {
           break;
         case 'contact':
           mainContainer.innerHTML = `
-          <section class="d-flex flex-column justify-content-center align-items-center">
+          <section class="border d-flex flex-column justify-content-center align-items-center">
               <h2 class='text-center'>Contact Information</h2>
               <p>
-                  Do you have any questions od you just want to say "Hello"?<br>
-                  You can reach out to us!
+                  Do you have any questions or do you just want to say "Hello"?<br>
+                  You can reach out to me!
+                  <a href="https://www.linkedin.com/in/m-amin-alizadeh">LinkedIn</a>
               </p>
-              <ul>
-                  <li>Our email: mail@mail.com</li>
-                  <li>Our phone number: 0042386534422</li>
-                  <li>Our address: street name 22, 84503, city, country</li>
-              </ul>
           </section>
           `;
           break;

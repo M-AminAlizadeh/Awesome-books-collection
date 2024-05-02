@@ -36,21 +36,46 @@
               <a class="nav-link active" id="contact" href="#contact-me">Contact me</a>
             </li>
           </ul>
-          <!-- Mobile -->
           <button role="button" class="d-inline d-md-none bg-transparent border-0" id="menu-btn">
             <img src="https://img.icons8.com/ios-filled/40/menu--v1.png" alt="menu--v1" />
           </button>
-      </nav>
-    </header>
+        </nav>
+      </header>
+      <!-- Mobile -->
+      <div id="mobile-menu" class="d-none w-100 bg-light h-100 position-absolute top-0 left-0 right-0 p-4 border-2">
+        <div class="d-flex justify-content-end">
+          <button role="button" class="border-0 bg-transparent" id="exit-btn">
+            <img src="https://img.icons8.com/ios-filled/40/delete-sign--v1.png" alt="delete-sign--v1"/>
+          </button>
+        </div>
+        <ul class="navbar-nav flex-column justify-content-between gap-3 mt-5">
+          <li class="nav-item w-75 m-auto">
+            <a
+              class="nav-link active text-primary"
+              id="list"
+              aria-current="page"
+              href="#list"
+            >
+              List
+            </a>
+          </li>
+          <li class="nav-item w-75 m-auto">
+            <a class="nav-link active" id="add-new" href="#add-new-book">Add new book</a>
+          </li>
+          <li class="nav-item w-75 m-auto">
+            <a class="nav-link active" id="contact" href="#contact-me">Contact me</a>
+          </li>
+        </ul>
+      </div>
 
     <time
       class="fw-bold text-right w-100 d-flex justify-content-end pe-5 pt-2"
     >
     </time>
-    <main class="py-5"></main>
+    <main class="py-5 w-75 m-auto"></main>
 
     <footer
-      class="bg-light position-fixed fixed-bottom d-flex justify-content-center align-item-center py-3 border"
+      class="bg-light position-fixed fixed-bottom d-flex justify-content-center align-item-center flex-wrap py-3 border"
     >
       Crafted with ❤️ by 
       <a href="https://github.com/M-AminAlizadeh" class="mx-1">Amin Alizadeh </a>

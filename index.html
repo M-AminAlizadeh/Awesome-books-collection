@@ -70,7 +70,64 @@
 
     <time class="fw-bold text-right w-100 d-flex justify-content-end pe-5 pt-2" id="date-time"></time>
 
-    <main class="py-5 w-75 m-auto"></main>
+    <main class="py-5 w-75 m-auto">
+      <!-- List of books -->
+      <section>
+        <p>addNewBookPage</p>
+      </section>
+      <!-- add new book page -->
+      <section class="p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-center">
+        <h2>Add a new book</h2>
+        <form class='d-flex flex-column gap-4 mt-4'>
+              <input
+                type='text'
+                class='form-control'
+                id='titleInput'
+                placeholder='Title of the book'
+                required
+              />
+              <input
+                type='text'
+                class='form-control'
+                id='authorInput'
+                placeholder='Author of the book'
+                required
+              />
+              <button
+                type='submit'
+                id='addBookBtn'
+                class='btn btn-primary'>
+                Add
+              </button>
+        </form>
+      </section>
+      <!-- contact me page  -->
+      <section class="p-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
+        <h2>Contact me</h2>
+          <p class="fs-6">
+            Do you have any questions or do you just want to say Hello?<br>
+            You can reach out to me!
+          </p>
+          <ul class="list-unstyled"> 
+            <li>
+              <a href="https://www.linkedin.com/in/m-amin-alizadeh" class="d-flex align-items-center text-decoration-none">
+                <img src="https://img.icons8.com/color/30/linkedin.png" alt="LinkedIn"/>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/M-AminAlizadeh" class="d-flex align-items-center text-decoration-none">
+                <img src="https://img.icons8.com/sf-regular/30/github.png" alt="GitHub"/>
+                GitHub
+              </a>
+            </li>
+          </ul>
+          <p>
+            If you find any issues in this project you can make an issue 
+            <a href="https://github.com/M-AminAlizadeh/Awesome-books-collection/issues">Here</a>
+          </p>
+      </section>
+    </main>
 
     <footer
       class="bg-light position-fixed fixed-bottom d-flex justify-content-center align-item-center flex-wrap py-3 border"

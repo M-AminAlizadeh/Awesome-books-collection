@@ -79,10 +79,15 @@ import contactMePage from './pages/contactMePage.js';
 const router = () => {
   navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
+      const { nodeName } = e.target;
       navLinks.forEach((navLink) => {
-        navLink.classList.remove('text-primary');
+        if (nodeName !== 'H1') {
+          navLink.classList.remove('text-primary');
+        }
       });
-      e.target.classList.add('text-primary');
+      if (nodeName !== 'H1') {
+        e.target.classList.add('text-primary');
+      }
 
       switch (e.target.id) {
         case 'brand-logo':

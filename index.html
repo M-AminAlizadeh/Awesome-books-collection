@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="./src/index.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="icon" href="https://img.icons8.com/color/48/courses.png"></link>
     <title>Awesome Books Collection</title>
   </head>
   <body>
     <header class="p-3 bg-body-tertiary border d-flex justify-content-between align-items-center w-100">
-      <a class="navbar-brand d-flex justify-content-center align-items-center" href="/">
-        <img src="https://img.icons8.com/color/40/courses.png" href="brand-logo" />
-        <h1 class="fs-5 d-none d-md-block">Awesome Books Collection</h1>
+      <a class="nav-link navbar-brand d-flex justify-content-center align-items-center" href="#list" id="brand-logo">
+        <img class="nav-link" src="https://img.icons8.com/color/40/courses.png" href="brand-logo" id="brand-logo" />
+        <h1 class="nav-link fs-5 d-none d-md-block" id="brand-logo">Awesome Books Collection</h1>
       </a>
 
       <nav>
@@ -68,10 +68,8 @@
         </ul>
       </div>
 
-    <time
-      class="fw-bold text-right w-100 d-flex justify-content-end pe-5 pt-2"
-    >
-    </time>
+    <time class="fw-bold text-right w-100 d-flex justify-content-end pe-5 pt-2" id="date-time"></time>
+
     <main class="py-5 w-75 m-auto"></main>
 
     <footer
@@ -81,6 +79,6 @@
       <a href="https://github.com/M-AminAlizadeh" class="mx-1">Amin Alizadeh </a>
       &copy; <p id="date-year"></p>
     </footer>
-    <script src="index.js" type="module"></script>
+    <script src="./src/index.js" type="module"></script>
   </body>
 </html>

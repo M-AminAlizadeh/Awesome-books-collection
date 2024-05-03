@@ -1,82 +1,9 @@
-import { mainContainer, navLinks } from './globalComponents.js';
-import bookListPage from './pages/bookListPage.js';
-import addNewBookPage from './pages/addNewBookPage.js';
-import contactMePage from './pages/contactMePage.js';
-// import BookStore from './bookstore.js';
-// import { renderBooks } from './add-remove-book.js';
-
-// const bookStore = new BookStore();
-// let addBtn;
-
-// const spa = () => {
-//   navLinks.forEach((navLink) => {
-//     navLink.addEventListener('click', (e) => {
-//       mainContainer.innerHTML = '';
-//       switch (e.target.id) {
-//         case 'list':
-//           renderBooks();
-//           break;
-//         case 'add-new':
-//           mainContainer.innerHTML = `
-//           <h2 class='text-center'>Add a new book</h2>
-//           <form action='' class='d-flex flex-column w-50 mx-auto gap-4 mt-4'>
-//             <input
-//               type='text'
-//               class='form-control'
-//               id='titleInput'
-//               placeholder='Title'
-//               required
-//             />
-//             <input
-//               type='text'
-//               class='form-control'
-//               id='authorInput'
-//               placeholder='Author'
-//               required
-//             />
-//             <button
-//               type='submit'
-//               id='addBtn'
-//               class='btn btn-primary w-25 align-self-end'>
-//               Add
-//             </button>
-//           </form>
-//           `;
-//           // ADD A NEW BOOK
-//           addBtn = document.querySelector('#addBtn');
-//           addBtn.addEventListener('click', (e) => {
-//             e.preventDefault();
-//             const titleInput = document.querySelector('#titleInput');
-//             const authorInput = document.querySelector('#authorInput');
-//             const titleValue = titleInput.value;
-//             const authorValue = authorInput.value;
-//             titleInput.className = '';
-//             authorInput.className = '';
-//             // Error handling
-//             if (titleValue === '' && authorValue === '') {
-//               titleInput.className = 'border border-2 border-danger';
-//               authorInput.className = 'border border-2 border-danger';
-//               return;
-//             }
-//             if (authorValue === '') {
-//               authorInput.className = 'border border-2 border-danger';
-//               return;
-//             }
-//             if (titleValue === '') {
-//               titleInput.className = 'border border-2 border-danger';
-//               return;
-//             }
-//             bookStore.add(titleInput.value, authorInput.value);
-//             titleInput.value = '';
-//             authorInput.value = '';
-//           });
-//           break;
-//       }
-//     });
-//   });
-// };
+import {
+  navLinks, listOfBooksPage, addNewBookPage, contactMePage,
+} from './globalComponents.js';
 
 const router = () => {
+  const pages = [listOfBooksPage, addNewBookPage, contactMePage];
   navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       const { nodeName } = e.target;
@@ -89,18 +16,38 @@ const router = () => {
         e.target.classList.add('text-primary');
       }
 
+      pages.forEach((page) => {
+        page.classList.add('d-none');
+      });
+
       switch (e.target.id) {
         case 'brand-logo':
-          mainContainer.innerHTML = bookListPage();
+          pages.forEach((page) => {
+            if (page.id === 'list-of-books-page') {
+              page.classList.remove('d-none');
+            }
+          });
           break;
         case 'list':
-          mainContainer.innerHTML = bookListPage();
+          pages.forEach((page) => {
+            if (page.id === 'list-of-books-page') {
+              page.classList.remove('d-none');
+            }
+          });
           break;
         case 'add-new':
-          mainContainer.innerHTML = addNewBookPage();
+          pages.forEach((page) => {
+            if (page.id === 'add-new-book-page') {
+              page.classList.remove('d-none');
+            }
+          });
           break;
         case 'contact':
-          mainContainer.innerHTML = contactMePage();
+          pages.forEach((page) => {
+            if (page.id === 'contact-me-page') {
+              page.classList.remove('d-none');
+            }
+          });
           break;
         default:
       }

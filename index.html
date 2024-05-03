@@ -72,13 +72,34 @@
 
     <main class="py-5 w-75 m-auto">
       <!-- List of books -->
-      <section>
-        <p>addNewBookPage</p>
+      <section id="list-of-books-page" class="d-none p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
+        <h2>List of books</h2>
+        <article class="w-100 table-responsive">
+          <table class="table table-bordered table-primary table-striped table-hover">
+            <thead>
+              <th>#</th>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>book name</td>
+                <td>Author name</td>
+                <td>
+                  <button type="button" class="btn bg-warning">Edit</button>
+                  <button type="button" class="btn bg-danger">Remove</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
       </section>
       <!-- add new book page -->
-      <section class="p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-center">
+      <section id="add-new-book-page" class="d-none p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
         <h2>Add a new book</h2>
-        <form class='d-flex flex-column gap-4 mt-4'>
+        <form class='w-100 d-flex flex-column gap-4 mt-4'>
               <input
                 type='text'
                 class='form-control'
@@ -102,7 +123,7 @@
         </form>
       </section>
       <!-- contact me page  -->
-      <section class="p-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
+      <section id="contact-me-page" class="d-none p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
         <h2>Contact me</h2>
           <p class="fs-6">
             Do you have any questions or do you just want to say Hello?<br>

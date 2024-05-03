@@ -11,11 +11,6 @@ import contactMePage from './pages/contactMePage.js';
 // const spa = () => {
 //   navLinks.forEach((navLink) => {
 //     navLink.addEventListener('click', (e) => {
-//       navLinks.forEach((navLink) => {
-//         navLink.classList.remove('text-primary');
-//       });
-//       e.target.classList.add('text-primary');
-
 //       mainContainer.innerHTML = '';
 //       switch (e.target.id) {
 //         case 'list':
@@ -76,50 +71,33 @@ import contactMePage from './pages/contactMePage.js';
 //             authorInput.value = '';
 //           });
 //           break;
-//         case 'contact':
-//           mainContainer.innerHTML = `
-//           <section class="border d-flex flex-column justify-content-center align-items-center">
-//               <h2 class='text-center'>Contact Information</h2>
-//               <p>
-//                   Do you have any questions or do you just want to say "Hello"?<br>
-//                   You can reach out to me!
-//                   <a href="https://www.linkedin.com/in/m-amin-alizadeh">LinkedIn</a>
-//               </p>
-//           </section>
-//           `;
-//           break;
-//         default:
-//           renderBooks();
-//           break;
 //       }
 //     });
 //   });
 // };
 
 const router = () => {
-  // console.log(navLinks);
   navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
-      // console.log(e.target.id);
+      navLinks.forEach((navLink) => {
+        navLink.classList.remove('text-primary');
+      });
+      e.target.classList.add('text-primary');
+
       switch (e.target.id) {
         case 'brand-logo':
-          // render list page
           mainContainer.innerHTML = bookListPage();
           break;
         case 'list':
-          // render list page
           mainContainer.innerHTML = bookListPage();
           break;
         case 'add-new':
-          // render add new book page
           mainContainer.innerHTML = addNewBookPage();
           break;
         case 'contact':
-          // render contact me page
           mainContainer.innerHTML = contactMePage();
           break;
         default:
-          // console.log('wrong route');
       }
     });
   });

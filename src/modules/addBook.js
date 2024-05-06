@@ -21,12 +21,15 @@ const addBook = () => {
       successAlert.classList.remove('d-none');
       errorAlert.classList.add('d-none');
     } else if (!bookTitleInputValue && bookAuthorInputValue) {
+      successAlert.classList.add('d-none');
       errorAlert.classList.remove('d-none');
       errorAlert.innerHTML = 'Please fill the title!';
     } else if (bookTitleInputValue && !bookAuthorInputValue) {
+      successAlert.classList.add('d-none');
       errorAlert.classList.remove('d-none');
       errorAlert.innerHTML = 'Please fill the author!';
     } else {
+      successAlert.classList.add('d-none');
       errorAlert.classList.remove('d-none');
       errorAlert.innerHTML = 'Please fill the both title and author!';
     }

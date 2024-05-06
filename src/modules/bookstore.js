@@ -1,3 +1,5 @@
+import { listOfBooksContainer } from './globalComponents.js';
+
 class BookStore {
   constructor() {
     this.books = [];
@@ -22,17 +24,23 @@ class BookStore {
   // Show books in DOM
   render() {
     let content = '';
+    listOfBooksContainer.innerHTML = content;
     if (this.books.length === 0) {
-      return '<p class="border fw-bold">No book added yet!</p>';
+      listOfBooksContainer.innerHTML = '<tr>No book added yet!</tr>';
     }
-    this.books.forEach((book) => {
+    this.books.forEach((book, index) => {
       content += `
-    <li class="w-100 mx-auto list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
-      <h5>"${book.title}" by ${book.author}</h5>
-      <button type="button" id="${book.id}" class="remove-btn border border-dark border-3 bg-danger text-light rounded">Remove</button>
-    </li>`;
+    <tr id=${book.id}>
+      <th scope="row">${index + 1}</th>
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td>
+        <button type="button" class="btn bg-warning">Edit</button>
+        <button type="button" class="btn bg-danger">Remove</button>
+      </td>
+    </tr>`;
     });
-    return content;
+    listOfBooksContainer.innerHTML = content;
   }
 }
 

@@ -82,44 +82,38 @@
               <th>Author</th>
               <th>Actions</th>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>book name</td>
-                <td>Author name</td>
-                <td>
-                  <button type="button" class="btn bg-warning">Edit</button>
-                  <button type="button" class="btn bg-danger">Remove</button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="list-of-books-container"></tbody>
           </table>
         </article>
       </section>
       <!-- add new book page -->
       <section id="add-new-book-page" class="d-none p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
         <h2>Add a new book</h2>
-        <form class='w-100 d-flex flex-column gap-4 mt-4'>
-              <input
-                type='text'
-                class='form-control'
-                id='titleInput'
-                placeholder='Title of the book'
-                required
-              />
-              <input
-                type='text'
-                class='form-control'
-                id='authorInput'
-                placeholder='Author of the book'
-                required
-              />
-              <button
-                type='submit'
-                id='addBookBtn'
-                class='btn btn-primary'>
-                Add
-              </button>
+        <form class='w-100 d-flex flex-column gap-4 mt-4' id="add-a-new-book-form">
+            <input
+              type='text'
+              class='form-control'
+              id='bookTitleInput'
+              placeholder='Title of the book'
+              required
+            />
+            <input
+              type='text'
+              class='form-control'
+              id='bookAuthorInput'
+              placeholder='Author of the book'
+              required
+            />
+            <button
+              type='submit'
+              id='addBookBtn'
+              class='btn btn-primary'>
+              Add
+            </button>
+            <div class="d-none alert alert-success" role="alert" id="success-alert">
+              You have successfully add a new book!
+            </div>
+            <div class="d-none alert alert-danger" role="alert" id="error-alert"></div>
         </form>
       </section>
       <!-- contact me page  -->
@@ -155,7 +149,7 @@
     >
       Crafted with ❤️ by 
       <a href="https://github.com/M-AminAlizadeh" class="mx-1">Amin Alizadeh </a>
-      &copy; <p id="date-year"></p>
+      &copy; 2023 -&nbsp;<p id="date-year"></p>
     </footer>
     <script src="./src/index.js" type="module"></script>
   </body>

@@ -23,24 +23,26 @@ class BookStore {
 
   // Show books in DOM
   render() {
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
     let content = '';
     listOfBooksContainer.innerHTML = content;
     if (this.books.length === 0) {
-      listOfBooksContainer.innerHTML = '<tr>No book added yet!</tr>';
+      listOfBooksContainer.innerHTML = '<tr><td colspan="5">No books added yet!</td></tr>';
+    } else {
+      this.books.forEach((book, index) => {
+        content += `
+            <tr id=${book.id}>
+              <th scope="row">${index + 1}</th>
+              <td>${book.title}</td>
+              <td>${book.author}</td>
+              <td>
+                <button type="button" class="btn bg-warning">Edit</button>
+                <button type="button" class="btn bg-danger">Remove</button>
+              </td>
+            </tr>`;
+      });
+      listOfBooksContainer.innerHTML = content;
     }
-    this.books.forEach((book, index) => {
-      content += `
-    <tr id=${book.id}>
-      <th scope="row">${index + 1}</th>
-      <td>${book.title}</td>
-      <td>${book.author}</td>
-      <td>
-        <button type="button" class="btn bg-warning">Edit</button>
-        <button type="button" class="btn bg-danger">Remove</button>
-      </td>
-    </tr>`;
-    });
-    listOfBooksContainer.innerHTML = content;
   }
 }
 

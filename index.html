@@ -86,6 +86,45 @@
           </table>
         </article>
       </section>
+      <!-- Edit Modal -->
+      <div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="edit-book" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="edit-book">Edit your book</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class='w-100 d-flex flex-column gap-4 mt-4' id="add-a-new-book-form">
+                <input
+                  type='text'
+                  class='form-control'
+                  id='editModalbookTitleInput'
+                  placeholder='Title of the book'
+                  required
+                />
+                <input
+                  type='text'
+                  class='form-control'
+                  id='editModalbookAuthorInput'
+                  placeholder='Author of the book'
+                  required
+                />
+                <button
+                  type='submit'
+                  id='editBookBtn'
+                  class='btn btn-warning'
+                  data-bs-dismiss="modal">
+                  Edit
+                </button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- add new book page -->
       <section id="add-new-book-page" class="d-none p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
         <h2>Add a new book</h2>
@@ -152,5 +191,6 @@
       &copy; 2023 -&nbsp;<p id="date-year"></p>
     </footer>
     <script src="./src/index.js" type="module"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

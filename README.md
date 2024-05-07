@@ -1,39 +1,51 @@
-<a name="readme-top"></a>
-
-<div align="center">
-
-  <h3><b>Awesome books</b></h3>
-
-</div>
-
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
-- [📗 Table of Contents](#-table-of-contents)
-- [📖 Awesome books ](#-awesome-books-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-  - [💻 Getting Started ](#-getting-started-)
+- [📗 Table of Contents](#table-of-contents)
+- [📖 About the project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [💻 Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
     - [Deployment](#deployment)
-  - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
+  - [👥 Authors](#authors)
+  - [🔭 Future Features](#future-features)
+  - [🤝 Contributing](#contributing)
+  - [⭐️ Show your support](#️show-your-support)
+  - [🙏 Acknowledgments](#acknowledgments)
+  - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome books <a name="about-project"></a>
+## 📖 Awesome Books Collection <a name="about-project"></a>
 
-**Awesome books** is a mandatory Javascript project in the Microverse curriculum. It is just a list of books, you can remove and add new ones.
+Awesome Books Collection is a web app to store your favorite books. The user can
+`Add/Read/Update/Delete` (all `CRUD` functionalities) to the collection.
+
+This project was built with vanilla JavaScript with modules (`functional programming`) and a Class (`object-oriented programming`).
+
+I tried to use both approaches to learn how to implement an idea into a digital solution using both of these principles.
+
+For storing data I chose `local storage` the reason was to learn how to store data in it and how to manipulate data
+using vanilla JavaScript.
+
+> Desktop screenshots
+
+![desktop-list-of-books](./src/assets/images/desktop-list-of-books.png)
+![desktop-add-new-book](./src/assets/images/desktop-add-new-book.png)
+![desktop-contact-me](./src/assets/images/desktop-contact-me.png)
+
+> Mobile screenshots
+
+![mobile-hamburger-menu](./src/assets/images/mobile-hamburger-menu.png)
+![mobile-list-of-books](./src/assets/images/mobile-list-of-books.png)
+![mobile-add-new-book](./src/assets/images/mobile-add-new-book.png)
+![mobile-contact-me](./src/assets/images/mobile-contact-me.png)
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,9 +54,20 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></li>
-    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+      Javascript (modules)
+      </a>
+    </li>
+    <li>
+      <a href="https://getbootstrap.com/">Bootstrap</a>
+    </li>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS3</a>
+    </li>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML5</a>
+    </li>
   </ul>
 </details>
 
@@ -52,9 +75,17 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **add new book**
-- **remove existing book**
-- **list of all books**
+- Fully responsive
+- OOP
+- Functional approach (using modules)
+- Pretty UI and elegant UX as a side project!
+- SPA (single page application)
+- Routing system
+- CRUD
+- Display Date and Time
+- Linters (Eslint, Sytlelint, Webhint, Lighthouse)
+- GitHub Actions
+- Well documented
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,7 +93,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://m-aminalizadeh.github.io/Microverse-awesome-books/)
+- [Live Demo Link](https://m-aminalizadeh.github.io/Awesome-books-collection/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,18 +105,18 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you'll need:
+To run this project you'll need:
 
-- `NodeJS`
-- `VSCode`
+- [Node js](https://nodejs.org/en)
+- [Vscode](https://code.visualstudio.com/) or any other IDE
 
 ### Setup
 
 Clone this repository to your desired folder:
 
 ```sh
-  cd my-folder
-  git clone git@github.com:andrianarivo/capstone-1.git
+  git clone git@github.com:M-AminAlizadeh/Awesome-books-collection.git awesome-books-collection
+  cd awesome-books-collection
 ```
 
 ### Install
@@ -93,24 +124,24 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd my-project
   npm install
 ```
 
 ### Usage
 
-To run the project start [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer). To use lints, run following
-commands:
+To start/run the project:
 
 ```sh
-  npx hint .
-  npx stylelint "**/*.{css,scss}"
-  npx eslint .
+  npm start
 ```
 
 ### Deployment
 
-You can deploy this project by pushing to your own `github page`
+You can deploy this project using these:
+
+- [GitHub Pages](https://pages.github.com/)
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,11 +149,10 @@ You can deploy this project by pushing to your own `github page`
 
 ## 👥 Authors <a name="authors"></a>
 
+**Amin Alizadeh**
 
-👤 **Amin**
-
-- GitHub: [@Amin](https://github.com/M-AminAlizadeh)
-- LinkedIn: [Mohammad Amin Alizadeh](https://www.linkedin.com/in/m-amin-alizadeh-60a20b1b0/)
+- [GitHub](https://github.com/M-AminAlizadeh)
+- [LinkedIn](https://www.linkedin.com/in/m-amin-alizadeh/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,9 +160,8 @@ You can deploy this project by pushing to your own `github page`
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--  **Using classes**
--  **Using es6**
--  **Using module bundler**
+- Dark/light Theme
+- Add backend and DB instead of local storage
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +171,7 @@ You can deploy this project by pushing to your own `github page`
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/andrianarivo/awesome_books/issues).
+Feel free to check the [issues page](https://github.com/M-AminAlizadeh/Awesome-books-collection/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,7 +179,7 @@ Feel free to check the [issues page](https://github.com/andrianarivo/awesome_boo
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give it a ⭐
+If you like this project kindly give it a ⭐
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,7 +187,7 @@ If you like this project give it a ⭐
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank all the team members for their support during the development phase.
+I would like to thank Microverse for the idea behind this and I only tried to implement it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,6 +195,6 @@ I would like to thank all the team members for their support during the developm
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is under [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

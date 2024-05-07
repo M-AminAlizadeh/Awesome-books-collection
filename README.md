@@ -195,6 +195,6 @@ I would like to thank Microverse for the idea behind this and I only tried to im
 
 ## 📝 License <a name="license"></a>
 
-This project is under [MIT](./LICENSE) licensed.
+This project is under [MIT](./LICENSE) license.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -21,7 +21,6 @@ class BookStore {
     );
   }
 
-  // Show books in DOM
   render() {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
     let content = '';

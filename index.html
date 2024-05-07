@@ -4,61 +4,196 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style/index.css">
-    <title>Awesome Books</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="icon" href="https://img.icons8.com/color/48/courses.png"></link>
+    <title>Awesome Books Collection</title>
   </head>
   <body>
-    <!-- Header -->
-    <header class="">
-      <nav class="px-5 navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Awesome Books</a>
-          <ul class="navbar-nav w-25 flex-row justify-content-between">
+    <header class="p-3 bg-body-tertiary border d-flex justify-content-between align-items-center w-100">
+      <a class="nav-link navbar-brand d-flex justify-content-center align-items-center" href="#list" id="brand-logo">
+        <img class="nav-link" src="https://img.icons8.com/color/40/courses.png" href="brand-logo" id="brand-logo" />
+        <h1 class="nav-link fs-5 d-none d-md-block" id="brand-logo">Awesome Books Collection</h1>
+      </a>
+
+      <nav>
+          <!-- Desktop -->
+          <ul class="navbar-nav flex-row justify-content-between gap-5 d-none d-md-flex">
             <li class="nav-item">
               <a
                 class="nav-link active text-primary"
                 id="list"
                 aria-current="page"
-                href="#"
-                >List</a
+                href="#list"
               >
+                List
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" id="add-new" href="#">Add new</a>
+              <a class="nav-link active" id="add-new" href="#add-new-book">Add new book</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" id="contact" href="#">Contact</a>
+              <a class="nav-link active" id="contact" href="#contact-me">Contact me</a>
             </li>
           </ul>
+          <button type="button" role="button" class="d-inline d-md-none bg-transparent border-0" id="menu-btn">
+            <img src="https://img.icons8.com/ios-filled/40/menu--v1.png" alt="menu--v1" />
+          </button>
+        </nav>
+      </header>
+      <!-- Mobile -->
+      <div id="mobile-menu" class="d-none w-100 bg-light h-100 position-absolute top-0 left-0 right-0 p-4 border-2">
+        <div class="d-flex justify-content-end">
+          <button type="button" role="button" class="border-0 bg-transparent" id="exit-btn">
+            <img src="https://img.icons8.com/ios-filled/40/delete-sign--v1.png" alt="delete-sign--v1"/>
+          </button>
         </div>
-      </nav>
-    </header>
-    <!-- Date -->
-    <time
-      class="fw-bold text-right w-100 d-flex justify-content-end pe-5 pt-2"
-    ></time>
-    <!-- Main -->
-    <main class="py-5"></main>
+        <ul class="navbar-nav flex-column justify-content-between gap-3 mt-5">
+          <li class="nav-item w-75 m-auto">
+            <a
+              class="nav-link active text-primary"
+              id="list"
+              aria-current="page"
+              href="#list"
+            >
+              List
+            </a>
+          </li>
+          <li class="nav-item w-75 m-auto">
+            <a class="nav-link active" id="add-new" href="#add-new-book">Add new book</a>
+          </li>
+          <li class="nav-item w-75 m-auto">
+            <a class="nav-link active" id="contact" href="#contact-me">Contact me</a>
+          </li>
+        </ul>
+      </div>
 
-    <!-- Footer -->
+    <section class="border fw-bold fs-3 w-100 d-flex flex-wrap justify-content-between p-3 align-items-center">
+      <div id="date-container" class="text-success"></div>
+      <time id="time-container" class="text-danger"></time>
+    </section>
+
+    <main class="py-5 w-75 m-auto">
+      <!-- List of books -->
+      <section id="list-of-books-page" class="d-none p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
+        <h2>List of books</h2>
+        <article class="w-100 table-responsive">
+          <table class="table table-bordered table-primary table-striped table-hover">
+            <thead>
+              <th>#</th>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Actions</th>
+            </thead>
+            <tbody id="list-of-books-container"></tbody>
+          </table>
+        </article>
+      </section>
+      <!-- Edit Modal -->
+      <div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="edit-book" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="edit-book">Edit your book</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class='w-100 d-flex flex-column gap-4 mt-4' id="add-a-new-book-form">
+                <input
+                  type='text'
+                  class='form-control'
+                  id='editModalbookTitleInput'
+                  placeholder='Title of the book'
+                  required
+                />
+                <input
+                  type='text'
+                  class='form-control'
+                  id='editModalbookAuthorInput'
+                  placeholder='Author of the book'
+                  required
+                />
+                <button
+                  type='submit'
+                  id='editBookBtn'
+                  class='btn btn-warning'
+                  data-bs-dismiss="modal">
+                  Edit
+                </button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- add new book page -->
+      <section id="add-new-book-page" class="d-none p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
+        <h2>Add a new book</h2>
+        <form class='w-100 d-flex flex-column gap-4 mt-4' id="add-a-new-book-form">
+            <input
+              type='text'
+              class='form-control'
+              id='bookTitleInput'
+              placeholder='Title of the book'
+              required
+            />
+            <input
+              type='text'
+              class='form-control'
+              id='bookAuthorInput'
+              placeholder='Author of the book'
+              required
+            />
+            <button
+              type='submit'
+              id='addBookBtn'
+              class='btn btn-primary'>
+              Add
+            </button>
+            <div class="d-none alert alert-success" role="alert" id="success-alert">
+              You have successfully add a new book!
+            </div>
+            <div class="d-none alert alert-danger" role="alert" id="error-alert"></div>
+        </form>
+      </section>
+      <!-- contact me page  -->
+      <section id="contact-me-page" class="d-none p-0 p-sm-5 d-flex flex-column flex-wrap justify-content-center align-items-start">
+        <h2>Contact me</h2>
+          <p class="fs-6">
+            Do you have any questions or do you just want to say Hello?<br>
+            You can reach out to me!
+          </p>
+          <ul class="list-unstyled"> 
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/m-amin-alizadeh" class="d-flex align-items-center text-decoration-none">
+                <img src="https://img.icons8.com/color/30/linkedin.png" alt="LinkedIn"/>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://github.com/M-AminAlizadeh" class="d-flex align-items-center text-decoration-none">
+                <img src="https://img.icons8.com/sf-regular/30/github.png" alt="GitHub"/>
+                GitHub
+              </a>
+            </li>
+          </ul>
+          <p>
+            If you find any issues in this project you can make an issue 
+            <a target="_blank" rel="noopener" href="https://github.com/M-AminAlizadeh/Awesome-books-collection/issues">Here</a>
+          </p>
+      </section>
+    </main>
+
     <footer
-      class="bg-light position-fixed fixed-bottom d-flex justify-content-around align-item-center"
+      class="bg-light position-fixed fixed-bottom d-flex justify-content-center align-item-center flex-wrap py-3 border"
     >
-      <p>&copy;Copyright</p>
+      Crafted with ❤️ by 
+      <a target="_blank" rel="noopener" href="https://github.com/M-AminAlizadeh" class="mx-1">Amin Alizadeh </a>
+      &copy; 2023 -&nbsp;<p id="date-year"></p>
     </footer>
-    <!-- Bootstrap CDN -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script src="index.js" type="module"></script>
+    <script src="./src/index.js" type="module"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

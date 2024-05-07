@@ -16,9 +16,11 @@ class BookStore {
   }
 
   remove(id) {
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
     this.books = this.books.filter(
-      (bookItem) => Number(bookItem.id) !== Number(id),
+      (book) => Number(book.id) !== Number(id),
     );
+    localStorage.setItem('books', JSON.stringify(this.books));
   }
 
   render() {
@@ -36,7 +38,7 @@ class BookStore {
               <td>${book.author}</td>
               <td>
                 <button type="button" class="btn bg-warning">Edit</button>
-                <button type="button" class="btn bg-danger">Remove</button>
+                <button type="button" class="btn bg-danger remove-btn" id=${book.id}>Remove</button>
               </td>
             </tr>`;
       });

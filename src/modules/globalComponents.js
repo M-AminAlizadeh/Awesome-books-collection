@@ -9,8 +9,13 @@ const bookAuthorInput = document.querySelector('#bookAuthorInput');
 const addNewBookForm = document.querySelector('#add-a-new-book-form');
 const successAlert = document.querySelector('#success-alert');
 const errorAlert = document.querySelector('#error-alert');
+const dateYear = document.querySelector('#date-year');
+const menuBtn = document.querySelector('#menu-btn');
+const exitBtn = document.querySelector('#exit-btn');
+const mobileMenu = document.querySelector('#mobile-menu');
 
 export {
   navLinks, listOfBooksPage, addNewBookPage, contactMePage, listOfBooksContainer, addNewBookBtn,
-  bookTitleInput, bookAuthorInput, addNewBookForm, successAlert, errorAlert,
+  bookTitleInput, bookAuthorInput, addNewBookForm, successAlert, errorAlert, dateYear, menuBtn,
+  exitBtn, mobileMenu,
 };

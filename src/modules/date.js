@@ -1,8 +1,8 @@
-const date = new Date();
-const dateYear = document.querySelector('#date-year');
-const year = date.getFullYear();
+import { dateYear } from './globalComponents.js';
 
 function currentYear() {
+  const date = new Date();
+  const year = date.getFullYear();
   dateYear.innerHTML = year;
 }
 

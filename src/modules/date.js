@@ -1,9 +1,14 @@
-import { dateYear } from './globalComponents.js';
+import { dateYear, dateContainer } from './globalComponents.js';
 
-function currentYear() {
+function date() {
+  const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const date = new Date();
   const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+  const dayOfWeek = daysOfWeek[date.getDay()].slice(0, 3);
   dateYear.innerHTML = year;
+  dateContainer.innerHTML = `${year} / ${month} / ${day} (${dayOfWeek})`;
 }
 
-export default currentYear;
+export default date;

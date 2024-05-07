@@ -1,4 +1,9 @@
-import { listOfBooksContainer } from './globalComponents.js';
+import {
+  listOfBooksContainer,
+  editModalbookTitleInput,
+  editModalbookAuthorInput,
+  formEditBtn,
+} from './globalComponents.js';
 
 class BookStore {
   constructor() {
@@ -23,6 +28,26 @@ class BookStore {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 
+  edit(id) {
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
+    this.books.forEach((book) => {
+      if (Number(book.id) === Number(id)) {
+        editModalbookTitleInput.value = book.title;
+        editModalbookAuthorInput.value = book.author;
+
+        formEditBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          book.title = editModalbookTitleInput.value;
+          book.author = editModalbookAuthorInput.value;
+
+          localStorage.setItem('books', JSON.stringify(this.books));
+
+          this.render();
+        });
+      }
+    });
+  }
+
   render() {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
     let content = '';
@@ -37,8 +62,10 @@ class BookStore {
               <td>${book.title}</td>
               <td>${book.author}</td>
               <td>
-                <button type="button" class="btn bg-warning">Edit</button>
-                <button type="button" class="btn bg-danger remove-btn" id=${book.id}>Remove</button>
+                <button id=${book.id} type="button" class="btn btn-warning edit-btn" data-bs-toggle="modal" data-bs-target="#edit-modal">
+                  Edit
+                </button>
+                <button id=${book.id} type="button" class="btn bg-danger remove-btn">Remove</button>
               </td>
             </tr>`;
       });

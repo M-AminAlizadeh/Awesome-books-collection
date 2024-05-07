@@ -13,9 +13,13 @@ const dateYear = document.querySelector('#date-year');
 const menuBtn = document.querySelector('#menu-btn');
 const exitBtn = document.querySelector('#exit-btn');
 const mobileMenu = document.querySelector('#mobile-menu');
+const formEditBtn = document.querySelector('#editBookBtn');
+const editModalbookTitleInput = document.querySelector('#editModalbookTitleInput');
+const editModalbookAuthorInput = document.querySelector('#editModalbookAuthorInput');
 
 export {
   navLinks, listOfBooksPage, addNewBookPage, contactMePage, listOfBooksContainer, addNewBookBtn,
   bookTitleInput, bookAuthorInput, addNewBookForm, successAlert, errorAlert, dateYear, menuBtn,
-  exitBtn, mobileMenu,
+  exitBtn, mobileMenu, formEditBtn, editModalbookTitleInput,
+  editModalbookAuthorInput,
 };

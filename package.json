@@ -1,17 +1,13 @@
 {
   "name": "awesome-books-collection",
-  "homepage": "",
+  "homepage": "https://m-aminalizadeh.github.io/Awesome-books-collection",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "author": "Amin Alizadeh",
   "license": "MIT",
   "scripts": {
     "start": "http-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/M-AminAlizadeh/Awesome-books-collection"
   },
   "devDependencies": {
     "babel-eslint": "10.x",
@@ -24,8 +20,5 @@
     "stylelint-config-standard": "21.x",
     "stylelint-csstree-validator": "1.x",
     "stylelint-scss": "3.x"
-  },
-  "dependencies": {
-    "bootstrap": "^5.3.3"
   }
 }

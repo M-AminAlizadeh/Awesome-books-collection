@@ -16,10 +16,12 @@ const mobileMenu = document.querySelector('#mobile-menu');
 const formEditBtn = document.querySelector('#editBookBtn');
 const editModalbookTitleInput = document.querySelector('#editModalbookTitleInput');
 const editModalbookAuthorInput = document.querySelector('#editModalbookAuthorInput');
+const dateContainer = document.querySelector('#date-container');
+const timeContainer = document.querySelector('#time-container');
 
 export {
   navLinks, listOfBooksPage, addNewBookPage, contactMePage, listOfBooksContainer, addNewBookBtn,
   bookTitleInput, bookAuthorInput, addNewBookForm, successAlert, errorAlert, dateYear, menuBtn,
   exitBtn, mobileMenu, formEditBtn, editModalbookTitleInput,
-  editModalbookAuthorInput,
+  editModalbookAuthorInput, dateContainer, timeContainer,
 };
